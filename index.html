@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home - Zeriya's site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="description" content="just for fun, don't expect much"/>
+<meta charset="utf-8">
+</head>
+ <!-- GET THEM!!! THEY'RE LOOKING AT THE SOURCE!!!! -->
+<style>
+
+*{
+    margin: 0px;
+    padding: 0px;
+  cursor: url('https://cdn.cursors-4u.net/previews/the-infamous-middle-finger-ed11cdae-32.webp') 43 43, auto !important;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+  
+body{
+    font-family: "Source Code Pro", 'Roboto', monospace;
+    background: linear-gradient(135deg, #1a0080, #3d00a8, #6c03b1, #9b1fe8, #7a00cc, #3d00a8, #1a0080);
+    min-height: 100vh;
+    background-size: 600% 600%;
+    animation: gradientShift 90s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-family: "Source Code Pro", "Roboto", monospace;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top: 16%;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    top: 16%;
+}
+
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+.links {
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        z-index: 1;
+        gap: 10px;
+    }
+
+.links a {
+        display: block;
+        margin-bottom: 21px;
+        text-decoration: none;
+        color: rgb(186, 125, 255);
+        text-align: center;
+        z-index: 1;
+        font-weight: bold; 
+    }
+    /* bold, for visibility purposes */
+</style>
+
+<div class="context">
+    <h1>Zeriya's website</h1>
+    <br>
+    <p style="text-align: center;">&nbsp;<span id="fuck" style="color: #08a303; font-family: courier; font-size: small;">silly text loading..</span></p>
+    <br>
+    <br>
+    <div class="links">
+        <a>placeholder</a>
+        <a>yet another placeholder</a>
+        <a>placeholder the third</a>
+        <a>placeholder forever after</a>
+    </div>
+    <div style="text-align: center;">
+        <br>
+        <a href="https://files.catbox.moe/56sj3b.mp4"><img src="./itsreallyhappening.gif"></a>
+        <a href="https://waterfox.com"><img src="./chromesuxx.gif"></a>
+        <a href="https://vscode.dev"> <img src="./vscode.gif"> </a><br>
+        <img src="./mwmac_white.png">
+    </div>
+</div>
+<script>
+    // the following code i wrote in 2023. i'm too lazy to update the name right now, so ignore the "silly cars" language. (lol)
+    const quotes = ["because the personal website is a dying art", "made on a 2013 MacBook Pro", "soundgarden is jesus", "jimmy-rigged code from 2023-2026 !!", "add me on xbox: lrdspook26", "turns out white girl music is VERY motivating", "#420blazeit", "better than nothing!", "got pancakes?", "still a work in progress", "🪨", "used to be 'digital rowlit', a long, long time ago", "cuz i gotta be productive somehow :)"]
+    const sillyquotes = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('fuck').textContent = sillyquotes;
+</script>
+</html>
