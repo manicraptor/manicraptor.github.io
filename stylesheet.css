@@ -1,0 +1,132 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+  cursor: url('https://cdn.cursors-4u.net/previews/the-infamous-middle-finger-ed11cdae-32.webp') 43 43, auto !important;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+  
+body{
+    font-family: "Source Code Pro", 'Roboto', monospace;
+    background: linear-gradient(135deg, #1a0080, #3d00a8, #6c03b1, #9b1fe8, #7a00cc, #3d00a8, #1a0080);
+    min-height: 100vh;
+    background-size: 600% 600%;
+    animation: gradientShift 90s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-family: "Source Code Pro", "Roboto", monospace;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top: 16%;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    top: 16%;
+}
+
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+.links {
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        z-index: 1;
+        gap: 10px;
+    }
+
+.links a {
+        display: block;
+        margin-bottom: 18px;
+        text-decoration: none;
+        color: rgb(186, 125, 255);
+        text-align: center;
+        z-index: 1;
+        font-weight: bold; 
+    }
+    /* bold, for visibility purposes */
+
+    /* awesomeness.css - by zeriya // manicraptor.github.io // 2025, revised 2026 */
+  #iconone {
+    display: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#iconone::-webkit-scrollbar {
+    display: none;
+}
+
+#icontwo {
+    display: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#icontwo::-webkit-scrollbar {
+    display: none;
+}
+/* full disclosure, the following css was made with claude */
+#iconleft, #iconright {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#iconleft { left: 0; }
+#iconright { right: 0; }
+
+@media (max-width: 768px) {
+    #iconleft, #iconright { display: none; }
+}
+/* end of clanker code */
