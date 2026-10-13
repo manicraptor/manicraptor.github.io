@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home - Zeriya's site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="description" content="just for fun, don't expect much"/>
+<meta charset="utf-8">
+<link id="styling" rel="stylesheet" href="rave.css">
+</head>
+ <!-- GET THEM!!! THEY'RE LOOKING AT THE SOURCE!!!! (jkjk)-->
+<body onload="nameChange()">
+    <div id="iconone">
+        <!--js does all the work here-->
+    </div>
+    <div id="iconleft">
+    </div>
+<div class="context">
+  <div id="header">
+    <h1><a style="font-size: 60px;" href="https://www.youtube.com/watch?v=gYEjExjV5EY">[</a> Zeriya's website <a style="font-size: 60px;" href="https://www.youtube.com/watch?v=vx0i-iPOlQk">]</a></h1>
+    <br></div> <!--both fire songs btw-->
+    <p style="text-align: center;">&nbsp;<span id="fuck" style="color: #08a303; font-family: courier; font-size: small;">silly text loading..</span></p>
+    <br>
+    <br>
+    <div class="links">
+        <a href="">BULLSHIT THE BLOG</a>
+        <a href="https://www.tumblr.com/friedspike">tumblr</a>
+        <a href="https://instagram.com/voltageismyfuel">instagram</a>
+        <a href="https://last.fm/user/snippingtool">my music taste</a> <!-- gonna build a dedicated page for this, same w everything else but something's better than nothing, right? !-->
+        <a href="./about.html">who the FUCK are you</a>
+        <a href="#" onclick="bgswitch()">calm down/switch bg</a>
+    </div>
+    <div style="text-align: center;">
+        <br>
+        <a href="https://files.catbox.moe/56sj3b.mp4"><img src="./itsreallyhappening.gif"></a>
+        <a href="https://waterfox.com"><img src="./chromesuxx.gif"></a>
+        <a href="https://vscode.dev"> <img src="./vscode.gif"> </a><br>
+        <img src="./mwmac_white.png">
+    </div>
+</div>
+ <div id="icontwo">
+    <!--no content, just images-->  
+    </div>
+    <div id="iconright">
+    </div>
+</body>
+
+<script>
+    const images = [
+    'dope.gif', 'tornado.gif', 'spark.gif', 'swirlskull.gif', 'snake.gif', 'star.gif',
+  ];
+
+  const iconDiv = document.getElementById('iconone');
+  const doubleDiv = document.getElementById('icontwo');
+  const tripleDiv = document.getElementById('iconleft');
+  const quadDiv = document.getElementById('iconright');
+  const numImages = 500;
+  let lastImage = null;
+
+  for (let i = 0; i < numImages; i++) {
+    do {
+      randomIndex = Math.floor(Math.random() * images.length);
+    } while (images[randomIndex] === lastImage);
+    lastImage = images[randomIndex];
+    const img = document.createElement('img');
+    img.src = `./assets/icons/${images[randomIndex]}`;
+    img.width = 60;
+    iconDiv.appendChild(img);
+  }
+
+  lastImage = null;
+  for (let i = 0; i < numImages; i++) {
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * images.length);
+    } while (images[randomIndex] === lastImage);
+    lastImage = images[randomIndex];
+    const img = document.createElement('img');
+    img.src = `./assets/icons/${images[randomIndex]}`;
+    img.width = 60;
+    doubleDiv.appendChild(img);
+  }
+
+ lastImage = null;
+  for (let i = 0; i < numImages; i++) {
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * images.length);
+    } while (images[randomIndex] === lastImage);
+    lastImage = images[randomIndex];
+    const img = document.createElement('img');
+    img.src = `./assets/icons/${images[randomIndex]}`;
+    img.width = 60;
+    tripleDiv.appendChild(img);
+  }
+
+  lastImage = null;
+  for (let i = 0; i < numImages; i++) {
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * images.length);
+    } while (images[randomIndex] === lastImage);
+    lastImage = images[randomIndex];
+    const img = document.createElement('img');
+    img.src = `./assets/icons/${images[randomIndex]}`;
+    img.width = 60;
+    quadDiv.appendChild(img);
+  }
+
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+    async function nameChange()  {
+while (true) {
+  document.title = "Welcome";
+  await delay(2000);
+  document.title = "To";
+  await delay(2000);
+  document.title = "Zeriya's";
+  await delay(2000);
+  document.title = "Website";
+  await delay(2000);
+  document.title = ":)";
+  await delay(4000);
+}
+}
+let frameOn = false;
+// bgSwitch BAD!!!!! (time to rewrite it half-assed, i guess)
+function bgswitch() {
+    
+    frameOn = !frameOn;
+
+    // hmmmmmmmmmm
+    const left = document.getElementById('iconleft');
+    const right = document.getElementById('iconright');
+    left.style.display = frameOn ? 'flex' : 'none';
+    right.style.display = frameOn ? 'flex' : 'none';
+
+    var link = document.getElementById("styling");
+    if (link.getAttribute("href") === "rave.css") {
+        link.setAttribute("href", "stylesheet.css");
+    } else {
+        link.setAttribute("href", "rave.css");
+    }
+}
+    // the following code i wrote in 2023. i'm too lazy to update the name right now, so ignore the "silly cars" language. (lol)
+    const quotes = ["because the personal website is a dying art", "made on a 2013 MacBook Pro", "soundgarden is jesus", "jimmy-rigged code from 2023-2026 !!", "add me on xbox: lrdspook26", "turns out white girl music is VERY motivating", "#420blazeit", "better than nothing!", "got pancakes?", "still a work in progress", "🪨", "used to be 'digital rowlit', a long, long time ago", "cuz i gotta be productive somehow :)"]
+    const sillyquotes = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('fuck').textContent = sillyquotes;
+</script>
+</html>

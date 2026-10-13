@@ -43,7 +43,16 @@ h1 {
     top: 16%;
 }
 
+.context h2{
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    top: 16%;
+}
 
+#header {
+    position: static;
+}
 
 
 @keyframes animate {

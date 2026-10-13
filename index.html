@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home - Zeriya's site</title>
+<title>lost/404 - zeriya's website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="description" content="just for fun, don't expect much"/>
+<meta name="description" content="just for fun, don't expect much. also, this link doesn't lead to nothing. 404 my heart"/>
 <meta charset="utf-8">
-<link id="styling" rel="stylesheet" href="stylesheet.css">
+<link id="styling" rel="stylesheet" href="accept.css">
+<link rel="stylesheet" href="https://use.typekit.net/iur3abj.css">
+<link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/mac-os-x-rainbow-swirl-busy-9dd02198-32.css">
 </head>
- <!-- GET THEM!!! THEY'RE LOOKING AT THE SOURCE!!!! (jkjk)-->
-<body onload="nameChange()">
-    <div id="iconone">
-        <!--js does all the work here-->
-    </div>
-    <div id="iconleft">
-    </div>
-<div class="context">
-    <h1>Zeriya's website</h1>
-    <br>
-    <p style="text-align: center;">&nbsp;<span id="fuck" style="color: #08a303; font-family: courier; font-size: small;">silly text loading..</span></p>
-    <br>
-    <br>
-    <div class="links">
-        <a>about me</a>
+<audio id="skull" src="./assets/skull.mp3"></audio>
+<body>
+<div id="menubarorwhateveritscalled">
+<p><a href="#" id="thething">⚉</a>  Thing 1 Thing 2 Thing 3 Thing 4 Thing 5</p>
+<div class="clock">04:20:35</div>
+</div>
+
+<div id="window">
+<h1>Zeriya's Website</h1>
+    <p style="text-align: center;">&nbsp;<span id="fuck" style="color: #08a303; font-family: courier; font-size: small;">ye shall load the text. if you're seeing this, get a better browser</span></p>
+<p> I don't got much to put here so far. So enjoy the company. <img src="./assets/sickle.gif">
+</p>
+<center><div id="lastfm-sidebar">
+      <p>What i've been listening to:</p>
+      <p id="nowPlaying"></p>
+      <div id="trackList", style="color: rgb(183, 25, 30);"></div>
+      <p>-----------</p>
+  </div></center>
+  <div class="links">
+        <a href="">BULLSHIT THE BLOG - coming soon!</a>
+        <a href="https://instagram.com/voltageismyfuel">instagram</a>
         <a href="https://www.tumblr.com/friedspike">tumblr</a>
-        <a>bluesky (soon)</a>
-        <a href="https://last.fm/user/snippingtool">my music taste</a> <!-- gonna build a dedicated page for this, same w everything else but something's better than nothing, right? !-->
-        <a>doodles</a>
-        <a href="#" onclick="bgswitch()">get colorful?</a>
-        <a>credits</a>
+        <a href="https://last.fm/user/snippingtool">last.fm</a> <!-- gonna build a dedicated page for this, same w everything else but something's better than nothing, right? !-->
+        <a href="./about.html">who the FUCK am i - also coming soon</a>
     </div>
     <div style="text-align: center;">
         <br>
@@ -37,113 +42,90 @@
         <img src="./mwmac_white.png">
     </div>
 </div>
- <div id="icontwo">
-    <!--no content, just images-->  
-    </div>
-    <div id="iconright">
-    </div>
 </body>
-
-<script>
-    const images = [
-    'dope.gif', 'tornado.gif', 'spark.gif', 'swirlskull.gif', 'snake.gif', 'star.gif',
-  ];
-
-  const iconDiv = document.getElementById('iconone');
-  const doubleDiv = document.getElementById('icontwo');
-  const tripleDiv = document.getElementById('iconleft');
-  const quadDiv = document.getElementById('iconright');
-  const numImages = 500;
-  let lastImage = null;
-
-  for (let i = 0; i < numImages; i++) {
-    do {
-      randomIndex = Math.floor(Math.random() * images.length);
-    } while (images[randomIndex] === lastImage);
-    lastImage = images[randomIndex];
-    const img = document.createElement('img');
-    img.src = `./assets/icons/${images[randomIndex]}`;
-    img.width = 60;
-    iconDiv.appendChild(img);
-  }
-
-  lastImage = null;
-  for (let i = 0; i < numImages; i++) {
-    let randomIndex;
-    do {
-      randomIndex = Math.floor(Math.random() * images.length);
-    } while (images[randomIndex] === lastImage);
-    lastImage = images[randomIndex];
-    const img = document.createElement('img');
-    img.src = `./assets/icons/${images[randomIndex]}`;
-    img.width = 60;
-    doubleDiv.appendChild(img);
-  }
-
- lastImage = null;
-  for (let i = 0; i < numImages; i++) {
-    let randomIndex;
-    do {
-      randomIndex = Math.floor(Math.random() * images.length);
-    } while (images[randomIndex] === lastImage);
-    lastImage = images[randomIndex];
-    const img = document.createElement('img');
-    img.src = `./assets/icons/${images[randomIndex]}`;
-    img.width = 60;
-    tripleDiv.appendChild(img);
-  }
-
-  lastImage = null;
-  for (let i = 0; i < numImages; i++) {
-    let randomIndex;
-    do {
-      randomIndex = Math.floor(Math.random() * images.length);
-    } while (images[randomIndex] === lastImage);
-    lastImage = images[randomIndex];
-    const img = document.createElement('img');
-    img.src = `./assets/icons/${images[randomIndex]}`;
-    img.width = 60;
-    quadDiv.appendChild(img);
-  }
-
-    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-    async function nameChange()  {
-while (true) {
-  document.title = "Welcome";
-  await delay(2000);
-  document.title = "To";
-  await delay(2000);
-  document.title = "Zeriya's";
-  await delay(2000);
-  document.title = "Website";
-  await delay(2000);
-  document.title = ":)";
-  await delay(4000);
+<script> // 8/15/2026 @ 2:36AM
+document.getElementById("thething").addEventListener("click", function(event) {
+    event.preventDefault();
+    const sound = document.getElementById("skull");
+    sound.currentTime = 0;
+    sound.play();
+}); 
+// yes i used mdn FUCK
+let clock = document.querySelector('.clock')
+function updateTime(){
+  let hours = new Date().getHours();
+  let minutes = new Date().getMinutes();
+  let seconds = new Date().getSeconds(); 
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+  clock.innerHTML = `${hours}:${minutes}:${seconds}`;
 }
-}
-let frameOn = false;
-// bgSwitch BAD!!!!! (time to rewrite it half-assed, i guess)
-function bgswitch() {
-    alert("warning: this contains flashing lights, if you are sensitive to this, please reload or exit the page. - Z [note this may appear when you turn it off too because bugs]");
-    
-    frameOn = !frameOn;
-
-    // hmmmmmmmmmm
-    const left = document.getElementById('iconleft');
-    const right = document.getElementById('iconright');
-    left.style.display = frameOn ? 'flex' : 'none';
-    right.style.display = frameOn ? 'flex' : 'none';
-
-    var link = document.getElementById("styling");
-    if (link.getAttribute("href") === "stylesheet.css") {
-        link.setAttribute("href", "rave.css");
-    } else {
-        link.setAttribute("href", "stylesheet.css");
-    }
-}
-    // the following code i wrote in 2023. i'm too lazy to update the name right now, so ignore the "silly cars" language. (lol)
-    const quotes = ["because the personal website is a dying art", "made on a 2013 MacBook Pro", "soundgarden is jesus", "jimmy-rigged code from 2023-2026 !!", "add me on xbox: lrdspook26", "turns out white girl music is VERY motivating", "#420blazeit", "better than nothing!", "got pancakes?", "still a work in progress", "🪨", "used to be 'digital rowlit', a long, long time ago", "cuz i gotta be productive somehow :)"]
+updateTime();
+// credits to ryandsouza13 on dev.to for the clock code 
+// the following code i wrote in 2023. i'm too lazy to update the name right now, so ignore the "silly cars" language. (lol)
+    const quotes = ["because the personal website is a dying art", "somehow made on a 12 inch macbook", "soundgarden is jesus", "jimmy-rigged code from 2023-2026 !!", "add me on xbox: lrdspook26", "turns out white girl music is VERY motivating", "#420blazeit", "better than nothing!", "got pancakes?", "still a work in progress", "🪨", "used to be 'digital rowlit', a long, long time ago", "cuz i gotta be productive somehow :)", "even songs don't last forever", "pizza consumption for the masses", "check out stuff below. or don't.", "made with unity(tm)"]
     const sillyquotes = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById('fuck').textContent = sillyquotes;
+  //recenttracks, a crappy last.fm fetcher from 2024
+    const username = 'snippingtool'; // Update your username here. Follow me on last.fm - snippingtool
+const loadtracks = 8; // Number of tracks to display
+const apiKey = '1feb1954276ee54e3c9877bb83a161ae'; // Your API key. Please don't spam requests. PLEASE. :)
+const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json`;
+
+async function fetchRecentTracks() {
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    const trackList = document.getElementById('trackList');
+    const nowPlaying = document.getElementById('nowPlaying');
+    trackList.innerHTML = '';
+    nowPlaying.style.display = 'none';
+
+    if (data && data.recenttracks && data.recenttracks.track) {
+      const tracks = data.recenttracks.track.slice(0, loadtracks);
+      if (tracks.length === 0) {
+        trackList.innerHTML = 'No scrobbles found. Go listen to music.';
+      } else {
+        tracks.forEach(track => {
+          const div = document.createElement('div');
+          
+          
+          const artistLink = document.createElement('a');
+          artistLink.href = `https://www.last.fm/music/${encodeURIComponent(track.artist['#text'])}`;
+          artistLink.textContent = track.artist['#text'];
+          artistLink.target = '_blank'; 
+
+          const trackLink = document.createElement('a');
+          trackLink.href = `https://www.last.fm/music/${encodeURIComponent(track.artist['#text'])}/_/${encodeURIComponent(track.name)}`;
+          trackLink.textContent = track.name;
+          trackLink.target = '_blank';
+
+          div.appendChild(artistLink);
+          div.appendChild(document.createTextNode(' - '));
+          div.appendChild(trackLink);
+          trackList.appendChild(div);
+
+          if (track['@attr'] && track['@attr'].nowplaying === 'true') {
+            nowPlaying.innerHTML = `Now Playing: <a href="${artistLink.href}" target="_blank">${track.artist['#text']}</a> - <a href="${trackLink.href}" target="_blank">${track.name}</a>`;
+            nowPlaying.style.display = 'block';
+          }
+        });
+      }
+    } else {
+      trackList.innerHTML = 'Seems they have not scrobbled anything recently. Go listen to some music.';
+    }
+  } catch (error) {
+    console.error('Error fetching recent tracks:', error);
+    alert('recenttracks: something went wrong. try again! If you are having constant issues, feel free to make an issue report on GitHub.');
+  }
+}
+
+function startFetching() {
+  fetchRecentTracks();
+  setInterval(fetchRecentTracks, 10000);
+  console.log("Searching for user's songs..");
+}
+startFetching();
 </script>
 </html>
