@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>lost/404 - zeriya's website</title>
+<title>zeriya's website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="description" content="just for fun, don't expect much. also, this link doesn't lead to nothing. 404 my heart"/>
+<meta name="description" content="sunshine rainbows and html. literally nothing interesting."/>
 <meta charset="utf-8">
 <link id="styling" rel="stylesheet" href="accept.css">
 <link rel="stylesheet" href="https://use.typekit.net/iur3abj.css">
 <link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/mac-os-x-rainbow-swirl-busy-9dd02198-32.css">
 </head>
 <audio id="skull" src="./assets/skull.mp3"></audio>
-<body>
+<body onload="nameChange()">
 <div id="menubarorwhateveritscalled">
 <p><a href="#" id="thething">⚉</a>  Thing 1 Thing 2 Thing 3 Thing 4 Thing 5</p>
 <div class="clock">04:20:35</div>
 </div>
+    
 
 <div id="window">
 <h1>Zeriya's Website</h1>
@@ -127,5 +128,21 @@ function startFetching() {
   console.log("Searching for user's songs..");
 }
 startFetching();
+
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+    async function nameChange()  {
+while (true) {
+  document.title = "Welcome";
+  await delay(2000);
+  document.title = "To";
+  await delay(2000);
+  document.title = "Zeriya's";
+  await delay(2000);
+  document.title = "Website";
+  await delay(2000);
+  document.title = ":)";
+  await delay(4000);
+}
+}
 </script>
 </html>
